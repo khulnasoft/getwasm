@@ -1,0 +1,22 @@
+{
+  "name": "getwasm",
+  "version": "0.2.0",
+  "type": "module",
+  "main": "./index.js",
+  "license": "MIT",
+  "homepage": "https://github.com/khulnasoft/getwasm",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khulnasoft/getwasm.git"
+  },
+  "scripts": {
+    "build": "ezburn --bundle --target=es2020 src/index.ts \"--mangle-props=_$\" --minify --outfile=index.min.js --format=esm && ezburn --bundle --target=es2020 src/index.ts --outfile=index.js \"--mangle-props=_$\" --format=esm",
+    "bench": "ezburn --bundle --target=es2020 src/index.ts \"--mangle-props=_$\" --minify --outfile=bench/getwasm.min.js --servedir=bench --global-name=getwasm",
+    "check": "tsc -noEmit -p src",
+    "test": "node test/run.js"
+  },
+  "devDependencies": {
+    "ezburn": "0.1.0",
+    "typescript": "5.6.2"
+  }
+}
