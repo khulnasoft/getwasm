@@ -3,7 +3,6 @@
   "version": "0.2.0",
   "devDependencies": {
     "ezburn": "~0.1.0",
-    "synopkg": "~13.0.3",
     "typescript": "~5.8.2"
   },
   "homepage": "https://github.com/khulnasoft/getwasm",
