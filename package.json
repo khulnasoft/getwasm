@@ -3,7 +3,6 @@
   "version": "0.2.0",
   "devDependencies": {
     "ezburn": "~0.1.0",
-    "synopkg": "~13.0.3",
     "typescript": "~5.8.2"
   },
   "homepage": "https://github.com/khulnasoft/getwasm",
@@ -14,7 +13,6 @@
     "bench": "ezburn --bundle --target=es2020 src/index.ts \"--mangle-props=_$\" --minify --outfile=bench/getwasm.min.js --servedir=bench --global-name=getwasm",
     "build": "ezburn --bundle --target=es2020 src/index.ts \"--mangle-props=_$\" --minify --outfile=index.min.js --format=esm && ezburn --bundle --target=es2020 src/index.ts --outfile=index.js \"--mangle-props=_$\" --format=esm",
     "check": "tsc -noEmit -p src",
-    "format": "synopkg format",
     "test": "node test/run.js"
   },
   "type": "module"
